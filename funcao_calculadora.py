@@ -1,35 +1,26 @@
-def calculadora():
-    while True:
-        print('OPERAÇÕES')
-        print('1: Soma')
-        print('2: Subtração')
-        print('3: Multiplicação')
-        print('4: Divisão')
-        print('0: Sair')
-        op = int(input('Digite o Número para a operação correspondente: '))
-        if op!=1 and op!= 2 and op!=3 and op!=4 and op!=0:
-            print('Essa opção não existe!')
-        elif op==0:
-            break            
-        else:
-            n1 = int(input('Digite o primeiro número: '))
-            n2 = int(input('Digite o segundo número: ')) 
-            if op==1:
-                res = n1+n2
-                print('A opção escolhida foi a SOMA.')
-                print('E o resultado é {}'.format(res))
-            elif op==2:
-                res = n1-n2
-                print('A opção escolhida foi a SUBTRAÇÃO.')
-                print('E o resultado é {}'.format(res))
-            elif op==3:
-                res = n1*n2
-                print('A opção escolhida foi a MULTIPLICAÇÃO.')
-                print('E o resultado é {}'.format(res))
-            elif op==4:
-                res = n1/n2
-                print('A opção escolhida foi a DIVISÃO.')
-                print('E o resultado é {}'.format(res))
+def calculadora(n1,n2,op):
+    if op==1:
+        res = n1+n2
+        print('O resultado é {}'.format(res))
+    elif op==2:
+        res = n1-n2
+        print('O resultado é {}'.format(res))
+    elif op==3:
+        res = n1*n2
+        print('O resultado é {}'.format(res))
+    elif op==4:
+        res = n1/n2
+        print('O resultado é {}'.format(res))
+    else:
+        res = 0
+        print('O resultado é {}'.format(res))
 
-
-calculadora()
+n1 = int(input('Digite o primeiro número: '))
+n2 = int(input('Digite o segundo número: '))
+print('ESCOLHA A OPERAÇÃO DESEJADA')
+print('[1] SOMA')
+print('[2] SUBTRAÇÃO')
+print('[3] MULTIPLICAÇÃO')
+print('[4] DIVISÃO')
+op = int(input('Digite o número que corresponde a operação: '))
+calculadora(n1,n2,op)
